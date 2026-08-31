@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Поездки по Узбекистану — AsiaTrip</title>
+<meta name="description" content="Авторские туры по Великому шёлковому пути: Самарканд, Бухара, Хива, Ташкент. Гарантированные даты выезда, гид, отели 3–5★.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ ПРОГРЕСС ПРОКРУТКИ ============ -->
+<div class="scroll-progress"><span id="scrollBar"></span></div>
+
+<!-- ============ ТОП-БАР ============ -->
+<div class="topbar">
+  <div class="container topbar__in">
+    <div class="topbar__left">
+      <a href="tel:+998505722212" class="topbar__item"><svg class="ic"><use href="#i-phone"/></svg>+998 50 572-22-12</a>
+      <a href="mailto:info@asiatripuz.com" class="topbar__item"><svg class="ic"><use href="#i-mail"/></svg>info@asiatripuz.com</a>
+      <span class="topbar__item topbar__item--mute"><svg class="ic"><use href="#i-clock"/></svg>Пн–Сб, 9:00–18:00 (Самарканд)</span>
+    </div>
+    <div class="topbar__right">
+      <div class="socials">
+        <a href="#" aria-label="Instagram"><svg class="ic"><use href="#i-ig"/></svg></a>
+        <a href="#" aria-label="Telegram"><svg class="ic"><use href="#i-tg"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg class="ic"><use href="#i-fb"/></svg></a>
+      </div>
+      <div class="lang" id="lang">
+        <button class="lang__btn" type="button" aria-expanded="false">🇷🇺 RU <svg class="ic ic--xs"><use href="#i-chev"/></svg></button>
+        <div class="lang__menu">
+          <button data-lang="ru" class="is-active">🇷🇺 Русский</button>
+          <button data-lang="en">🇬🇧 English</button>
+          <button data-lang="it">🇮🇹 Italiano</button>
+          <button data-lang="uz">🇺🇿 O‘zbekcha</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ШАПКА ============ -->
+<header class="header" id="header">
+  <div class="container header__in">
+    <a href="#" class="logo">
+      <span class="logo__mark"><svg class="ic"><use href="#i-plane"/></svg></span>
+      <span class="logo__text">Asia<b>Trip</b><small>Узбекистан · с 2014</small></span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#" class="nav__link">Главная</a>
+      <div class="nav__drop">
+        <a href="#" class="nav__link is-active">Направления <svg class="ic ic--xs"><use href="#i-chev"/></svg></a>
+        <div class="mega">
+          <div class="mega__col">
+            <span class="mega__title">Классика</span>
+            <a href="#">Самарканд</a><a href="#">Бухара</a><a href="#">Хива</a><a href="#">Ташкент</a>
+          </div>
+          <div class="mega__col">
+            <span class="mega__title">Долина</span>
+            <a href="#">Фергана</a><a href="#">Наманган</a><a href="#">Андижан</a><a href="#">Коканд</a>
+          </div>
+          <div class="mega__col">
+            <span class="mega__title">Природа</span>
+            <a href="#">Заамин</a><a href="#">Чарвак</a><a href="#">Нураты</a><a href="#">Аральское море</a>
+          </div>
+          <div class="mega__promo">
+            <span class="mega__promo-tag">Хит сезона</span>
+            <b>Осень на Шёлковом пути</b>
+            <p>Мягкая погода, урожай и −15% на группы от 4 человек.</p>
+            <a href="#trips" class="btn btn--sm btn--gold">Смотреть туры</a>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="nav__link">Услуги</a>
+      <a href="#" class="nav__link">Блог</a>
+      <a href="#" class="nav__link">О нас</a>
+      <a href="#" class="nav__link">Контакты</a>
+    </nav>
+
+    <div class="header__actions">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Сменить тему">
+        <svg class="ic"><use href="#i-sun"/></svg>
+      </button>
+      <button class="icon-btn icon-btn--fav" id="favBtn" type="button" aria-label="Избранное">
+        <svg class="ic"><use href="#i-heart"/></svg>
+        <span class="badge" id="favCount">0</span>
+      </button>
+      <a href="#cta" class="btn btn--gold hide-sm">Подобрать тур</a>
+      <button class="burger" id="burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ ГЕРОЙ ============ -->
+<section class="hero">
+  <div class="hero__media">
+    <img src="img/hero.jpg" alt="Регистан, Самарканд">
+    <div class="hero__veil"></div>
+  </div>
+
+  <div class="container hero__in">
+    <nav class="crumbs"><a href="#">Главная</a><span>/</span><b>Поездки</b></nav>
+    <span class="eyebrow"><i></i>18 маршрутов · 6 регионов · 12 лет опыта</span>
+    <h1 class="hero__title">Поездки по <em>Шёлковому пути</em></h1>
+    <p class="hero__lead">Авторские маршруты по Узбекистану и Центральной Азии с гарантированными датами выезда, локальными гидами и продуманной логистикой — от бирюзовых куполов Самарканда до горных озёр Заамина.</p>
+
+    <!-- Поисковая панель -->
+    <form class="searchbar" id="searchForm">
+      <div class="searchbar__field">
+        <label>Направление</label>
+        <div class="searchbar__ctl">
+          <svg class="ic"><use href="#i-pin"/></svg>
+          <select id="sDest">
+            <option value="">Любое направление</option>
+            <option>Samarkand</option><option>Bukhara</option><option>Khiva</option>
+            <option>Tashkent</option><option>Shakhrisabz</option><option>Zaamin</option>
+          </select>
+        </div>
+      </div>
+      <div class="searchbar__field">
+        <label>Длительность</label>
+        <div class="searchbar__ctl">
+          <svg class="ic"><use href="#i-clock"/></svg>
+          <select id="sDur">
+            <option value="">Любая</option>
+            <option value="0-4">до 4 дней</option>
+            <option value="5-6">5–6 дней</option>
+            <option value="7-14">7 дней и больше</option>
+          </select>
+        </div>
+      </div>
+      <div class="searchbar__field">
+        <label>Месяц выезда</label>
+        <div class="searchbar__ctl">
+          <svg class="ic"><use href="#i-cal"/></svg>
+          <select id="sMonth">
+            <option value="">Любой</option>
+            <option value="9">Сентябрь 2026</option>
+            <option value="10">Октябрь 2026</option>
+            <option value="11">Ноябрь 2026</option>
+            <option value="12">Декабрь 2026</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn btn--gold btn--lg" type="submit"><svg class="ic"><use href="#i-search"/></svg>Найти тур</button>
+    </form>
+
+    <ul class="hero__stats">
+      <li><b data-count="18">0</b><span>маршрутов</span></li>
+      <li><b data-count="4200">0</b><span>гостей с 2014</span></li>
+      <li><b data-count="98">0</b><span>% рекомендуют</span></li>
+      <li><b data-count="24">0</b><span>часа на ответ</span></li>
+    </ul>
+  </div>
+
+  <div class="hero__scroll"><span></span>прокрутите</div>
+</section>
+
+<!-- ============ КАТЕГОРИИ ============ -->
+<section class="cats reveal">
+  <div class="container">
+    <div class="cats__row" id="cats">
+      <button class="cat is-active" data-cat="all"><svg class="ic"><use href="#i-globe"/></svg>Все туры</button>
+      <button class="cat" data-cat="culture"><svg class="ic"><use href="#i-mosque"/></svg>Культура и история</button>
+      <button class="cat" data-cat="silk"><svg class="ic"><use href="#i-camel"/></svg>Шёлковый путь</button>
+      <button class="cat" data-cat="nature"><svg class="ic"><use href="#i-mount"/></svg>Природа и эко</button>
+      <button class="cat" data-cat="gastro"><svg class="ic"><use href="#i-food"/></svg>Гастрономия</button>
+      <button class="cat" data-cat="pilgrim"><svg class="ic"><use href="#i-star"/></svg>Зиёрат</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ КАТАЛОГ ============ -->
+<main class="catalog" id="trips">
+  <div class="container catalog__grid">
+
+    <!-- Фильтры -->
+    <aside class="filters" id="filters">
+      <div class="filters__head">
+        <h2>Фильтры</h2>
+        <button class="link-btn" id="clearAll" type="button">Сбросить всё</button>
+        <button class="icon-btn filters__close" id="filtersClose" type="button" aria-label="Закрыть"><svg class="ic"><use href="#i-close"/></svg></button>
+      </div>
+
+      <div class="fgroup" data-open="true">
+        <button class="fgroup__head" type="button">Направление<svg class="ic ic--xs"><use href="#i-chev"/></svg></button>
+        <div class="fgroup__body" id="fDest"></div>
+      </div>
+
+      <div class="fgroup" data-open="true">
+        <button class="fgroup__head" type="button">Цена, €<svg class="ic ic--xs"><use href="#i-chev"/></svg></button>
+        <div class="fgroup__body">
+          <div class="range">
+            <div class="range__track"><span class="range__fill" id="priceFill"></span></div>
+            <input type="range" id="priceMin" min="400" max="1400" step="10" value="400">
+            <input type="range" id="priceMax" min="400" max="1400" step="10" value="1400">
+          </div>
+          <div class="range__vals"><span id="priceMinL">€ 400</span><span id="priceMaxL">€ 1 400</span></div>
+        </div>
+      </div>
+
+      <div class="fgroup" data-open="true">
+        <button class="fgroup__head" type="button">Длительность<svg class="ic ic--xs"><use href="#i-chev"/></svg></button>
+        <div class="fgroup__body">
+          <div class="chips" id="fDur">
+            <button class="chip" data-dur="0-4">до 4 дней</button>
+            <button class="chip" data-dur="5-6">5–6 дней</button>
+            <button class="chip" data-dur="7-14">7+ дней</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="fgroup" data-open="true">
+        <button class="fgroup__head" type="button">Даты выезда<svg class="ic ic--xs"><use href="#i-chev"/></svg></button>
+        <div class="fgroup__body">
+          <div class="chips" id="fMonth">
+            <button class="chip" data-month="9">Сен 2026</button>
+            <button class="chip" data-month="10">Окт 2026</button>
+            <button class="chip" data-month="11">Ноя 2026</button>
+            <button class="chip" data-month="12">Дек 2026</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="fgroup" data-open="true">
+        <button class="fgroup__head" type="button">Дополнительно<svg class="ic ic--xs"><use href="#i-chev"/></svg></button>
+        <div class="fgroup__body">
+          <label class="switch"><input type="checkbox" id="fAvail"><i></i><span>Только с местами</span></label>
+          <label class="switch"><input type="checkbox" id="fOnlyFav"><i></i><span>Только избранное</span></label>
+        </div>
+      </div>
+
+      <div class="filters__help">
+        <svg class="ic"><use href="#i-support"/></svg>
+        <div>
+          <b>Не нашли маршрут?</b>
+          <p>Соберём индивидуальный тур под ваши даты за 24 часа.</p>
+          <a href="#cta" class="link-btn">Оставить заявку →</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Результаты -->
+    <section class="results">
+      <div class="results__bar">
+        <div class="results__count">Найдено <b id="count">0</b> <span id="countWord">туров</span></div>
+        <div class="results__tools">
+          <button class="btn btn--ghost btn--sm show-lg" id="filtersOpen" type="button"><svg class="ic"><use href="#i-filter"/></svg>Фильтры</button>
+          <div class="select">
+            <svg class="ic ic--xs"><use href="#i-sort"/></svg>
+            <select id="sort">
+              <option value="pop">Популярные</option>
+              <option value="priceAsc">Сначала дешевле</option>
+              <option value="priceDesc">Сначала дороже</option>
+              <option value="durAsc">Короткие</option>
+              <option value="durDesc">Длинные</option>
+              <option value="rate">По рейтингу</option>
+            </select>
+          </div>
+          <div class="viewtoggle" id="view">
+            <button class="is-active" data-view="grid" aria-label="Сетка"><svg class="ic"><use href="#i-grid"/></svg></button>
+            <button data-view="list" aria-label="Список"><svg class="ic"><use href="#i-list"/></svg></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="activechips" id="activeChips"></div>
+
+      <div class="cards cards--grid" id="cards"></div>
+
+      <div class="empty" id="empty" hidden>
+        <svg class="ic"><use href="#i-empty"/></svg>
+        <h3>Ничего не найдено</h3>
+        <p>Попробуйте расширить диапазон цены или снять часть фильтров.</p>
+        <button class="btn btn--gold" id="emptyReset" type="button">Сбросить фильтры</button>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!-- ============ ПОЧЕМУ МЫ ============ -->
+<section class="why reveal">
+  <div class="container">
+    <header class="sechead">
+      <span class="eyebrow"><i></i>Почему AsiaTrip</span>
+      <h2>Мы живём здесь — и знаем маршруты изнутри</h2>
+    </header>
+    <div class="why__grid">
+      <article class="why__card"><span class="why__num">01</span><h3>Локальные гиды</h3><p>Историки и востоковеды из Самарканда и Бухары, а не наёмные сопровождающие.</p></article>
+      <article class="why__card"><span class="why__num">02</span><h3>Гарантированные даты</h3><p>Выезд состоится даже при группе от 2 человек — маршрут не отменяется.</p></article>
+      <article class="why__card"><span class="why__num">03</span><h3>Честная цена</h3><p>В стоимости — отели, трансферы, входные билеты и завтраки. Без скрытых доплат.</p></article>
+      <article class="why__card"><span class="why__num">04</span><h3>Поддержка 24/7</h3><p>Координатор на связи в Telegram и WhatsApp на всём протяжении поездки.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ОТЗЫВЫ ============ -->
+<section class="revs reveal">
+  <div class="container">
+    <header class="sechead sechead--center">
+      <span class="eyebrow"><i></i>Отзывы путешественников</span>
+      <h2>4.9 из 5 по 320 отзывам</h2>
+    </header>
+    <div class="revs__row" id="revs"></div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta" id="cta">
+  <div class="container cta__in">
+    <div class="cta__text">
+      <h2>Соберём маршрут под вас</h2>
+      <p>Расскажите даты и интересы — предложим 3 варианта программы с ценами в течение суток.</p>
+      <ul class="cta__list">
+        <li><svg class="ic"><use href="#i-check"/></svg>Бесплатно и без обязательств</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Ответ в течение 24 часов</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Цены от туроператора напрямую</li>
+      </ul>
+    </div>
+    <form class="cta__form" id="ctaForm">
+      <div class="field"><input type="text" id="cName" required placeholder=" "><label>Ваше имя</label></div>
+      <div class="field"><input type="tel" id="cPhone" required placeholder=" "><label>Телефон или Telegram</label></div>
+      <div class="field"><textarea id="cMsg" rows="3" placeholder=" "></textarea><label>Даты, количество человек, пожелания</label></div>
+      <button class="btn btn--gold btn--lg btn--block" type="submit">Получить подборку</button>
+      <small class="cta__note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.</small>
+    </form>
+  </div>
+</section>
+
+<!-- ============ ПОДВАЛ ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__news">
+      <div>
+        <h3>Подпишитесь на рассылку</h3>
+        <p>Новые маршруты, скидки на ранние бронирования и сезонные советы — раз в месяц.</p>
+      </div>
+      <form class="news" id="newsForm">
+        <input type="email" required placeholder="Ваш e-mail">
+        <button class="btn btn--gold" type="submit">Подписаться</button>
+      </form>
+    </div>
+
+    <div class="footer__grid">
+      <div class="footer__col footer__col--brand">
+        <a href="#" class="logo logo--light">
+          <span class="logo__mark"><svg class="ic"><use href="#i-plane"/></svg></span>
+          <span class="logo__text">Asia<b>Trip</b><small>Discover the world you have not seen</small></span>
+        </a>
+        <p>Туроператор в Самарканде. Организуем групповые и индивидуальные поездки по Узбекистану и Центральной Азии с 2014 года.</p>
+        <div class="socials socials--lg">
+          <a href="#" aria-label="Instagram"><svg class="ic"><use href="#i-ig"/></svg></a>
+          <a href="#" aria-label="Telegram"><svg class="ic"><use href="#i-tg"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg class="ic"><use href="#i-fb"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg class="ic"><use href="#i-yt"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Компания</h4>
+        <a href="#">О нас</a><a href="#">Услуги</a><a href="#">Гиды</a><a href="#">Блог</a><a href="#">Контакты</a>
+      </div>
+      <div class="footer__col">
+        <h4>Направления</h4>
+        <a href="#">Самарканд</a><a href="#">Бухара</a><a href="#">Хива</a><a href="#">Ташкент</a><a href="#">Заамин</a>
+      </div>
+      <div class="footer__col">
+        <h4>Контакты</h4>
+        <a href="tel:+998505722212"><svg class="ic"><use href="#i-phone"/></svg>+998 50 572-22-12</a>
+        <a href="tel:+998910710077"><svg class="ic"><use href="#i-phone"/></svg>+998 91 071-00-77</a>
+        <a href="mailto:info@asiatripuz.com"><svg class="ic"><use href="#i-mail"/></svg>info@asiatripuz.com</a>
+        <span><svg class="ic"><use href="#i-pin"/></svg>Firdavsiy St 3, Samarkand, Uzbekistan</span>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© 2026 AsiaTrip. Все права защищены.</span>
+      <div class="footer__pay"><i>VISA</i><i>MC</i><i>UZCARD</i><i>HUMO</i></div>
+    </div>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="Наверх"><svg class="ic"><use href="#i-up"/></svg></button>
+
+<!-- ============ МОДАЛКА ТУРА ============ -->
+<div class="modal" id="modal" hidden>
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__box" role="dialog" aria-modal="true">
+    <button class="modal__x" data-close aria-label="Закрыть"><svg class="ic"><use href="#i-close"/></svg></button>
+    <div class="modal__body" id="modalBody"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- ============ SVG-СПРАЙТ ============ -->
+<svg style="display:none" aria-hidden="true">
+<defs>
+<symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m22 6-10 7L2 6"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 7v5l3.5 2"/></symbol>
+<symbol id="i-chev" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></symbol>
+<symbol id="i-plane" viewBox="0 0 24 24"><path fill="currentColor" d="M21 15.5 13.5 11V5a1.5 1.5 0 0 0-3 0v6L3 15.5V17l7.5-2.2v4L8 20.4V22l4-1.2 4 1.2v-1.6l-2.5-1.6v-4L21 17z"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M20.8 5.6a5 5 0 0 0-7.1 0L12 7.3l-1.7-1.7a5 5 0 1 0-7.1 7.1l1.7 1.7L12 21.5l7.1-7.1 1.7-1.7a5 5 0 0 0 0-7.1z"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="2.8" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M16 3v4M8 3v4M3 10h18"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="m20 20-3.6-3.6"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M16 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3.4" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M22 20v-2a4 4 0 0 0-3-3.9M17 3.6a4 4 0 0 1 0 7.7"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2 3 6.3 6.9 1-5 4.8 1.2 6.9-6.1-3.3-6.1 3.3L7.1 14l-5-4.8 6.9-1z"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z"/></symbol>
+<symbol id="i-mosque" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M12 2c2.5 2.4 4 4.4 4 6.3 0 1.5-.9 2.7-2 3.4h4v10H6V11.7h4c-1.1-.7-2-1.9-2-3.4C8 6.4 9.5 4.4 12 2z"/><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M3 21V9m18 12V9"/></symbol>
+<symbol id="i-camel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M3 20v-5c0-2 1.5-3 3-3s2.5 1.5 3 1.5S11 10 13.5 10 17 12 18 13.5c.7 1 2 1 2 2.5V20M6 20v-3m12 3v-3M13.5 10c0-2 1-3 2.5-3s2 1.2 2 2.5"/></symbol>
+<symbol id="i-mount" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="m3 19 6-11 4 6.5 2.2-3.5L21 19z"/></symbol>
+<symbol id="i-food" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 3v8m0 0a3 3 0 0 0 3-3V3M6 11v10M18 3c-1.7 1.2-2.5 3-2.5 5.5S16.5 12 18 12v9"/></symbol>
+<symbol id="i-filter" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" d="M3 6h18M6 12h12M10 18h4"/></symbol>
+<symbol id="i-sort" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" d="M4 7h10M4 12h7M4 17h4m8-11v12m0 0 3-3m-3 3-3-3"/></symbol>
+<symbol id="i-grid" viewBox="0 0 24 24"><path fill="currentColor" d="M4 4h7v7H4zm9 0h7v7h-7zM4 13h7v7H4zm9 0h7v7h-7z"/></symbol>
+<symbol id="i-list" viewBox="0 0 24 24"><path fill="currentColor" d="M4 5h16v4H4zm0 6h16v4H4zm0 6h16v3H4z"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m4 12.5 5 5L20 6.5"/></symbol>
+<symbol id="i-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5m0 0-6 6m6-6 6 6"/></symbol>
+<symbol id="i-support" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="2.5" y="13.5" width="4" height="6" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="17.5" y="13.5" width="4" height="6" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+<symbol id="i-empty" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="m20 20-3.6-3.6M8.5 11h5"/></symbol>
+<symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></symbol>
+<symbol id="i-tg" viewBox="0 0 24 24"><path fill="currentColor" d="M21.5 4.3 2.9 11.4c-1 .4-1 1.4 0 1.7l4.6 1.4 1.8 5.4c.2.7.6.8 1.2.3l2.6-2.3 4.7 3.5c.9.5 1.4.2 1.6-.8l2.8-13.2c.2-1.2-.4-1.7-1.7-1.1zM8.9 14.2l8.7-5.5c.4-.3.8-.1.5.2l-7.3 6.6-.3 3z"/></symbol>
+<symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M14 9V7.2c0-.9.2-1.3 1.4-1.3H17V3h-2.6c-3 0-4.2 1.4-4.2 3.9V9H8v3h2.2v9H14v-9h2.6l.4-3z"/></symbol>
+<symbol id="i-yt" viewBox="0 0 24 24"><path fill="currentColor" d="M22.5 7.5a3 3 0 0 0-2.1-2.1C18.6 5 12 5 12 5s-6.6 0-8.4.4A3 3 0 0 0 1.5 7.5 31 31 0 0 0 1 12a31 31 0 0 0 .5 4.5 3 3 0 0 0 2.1 2.1C5.4 19 12 19 12 19s6.6 0 8.4-.4a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23 12a31 31 0 0 0-.5-4.5zM10 15.2V8.8l5.5 3.2z"/></symbol>
+</defs>
+</svg>
+
+<script src="js/script.js"></script>
+</body>
+</html>
