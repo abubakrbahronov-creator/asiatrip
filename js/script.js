@@ -586,13 +586,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* язык */
-  $('.lang__btn').addEventListener('click', e => { e.stopPropagation(); $('#lang').classList.toggle('open'); });
-  document.addEventListener('click', () => $('#lang').classList.remove('open'));
+  const syncLang = () => $('.topbar').classList.toggle('lang-open', $('#lang').classList.contains('open'));
+  $('.lang__btn').addEventListener('click', e => { e.stopPropagation(); $('#lang').classList.toggle('open'); syncLang(); });
+  document.addEventListener('click', () => { $('#lang').classList.remove('open'); syncLang(); });
+  window.addEventListener('scroll', () => { if ($('#lang').classList.contains('open')) { $('#lang').classList.remove('open'); syncLang(); } }, { passive: true });
   $$('.lang__menu button').forEach(b => b.addEventListener('click', () => {
     $$('.lang__menu button').forEach(x => x.classList.remove('is-active'));
     b.classList.add('is-active');
     $('.lang__btn').innerHTML = b.textContent.trim().split(' ')[0] + ' ' + b.dataset.lang.toUpperCase() +
       ' <svg class="ic ic--xs"><use href="#i-chev"/></svg>';
+    $('#lang').classList.remove('open'); syncLang();
     toast('Язык интерфейса: ' + b.textContent.trim());
   }));
 
